@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>数据管理平台 | Log in</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+    </title>
+    <!-- Bootstrap -->
+	{% block extracss %}
+    <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{%static 'css/dashboard.css' %}" rel="stylesheet">
+	{% endblock %}
+    <style type="text/css">
+        body {
+            background: url('images/Desert.jpg') top center no-repeat;
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        span {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="content">
+        <header>
+            <p class="title">
+                <span>中尺度气象数据管理平台 </span>
+            </p>
+            <!--/span-->
+        </header>
+        <!--/row-->
+        <br>
+        <article>
+            <div class="login-box">
+                <div class="loginTitle">
+                    登录平台账户
+                </div>
+                <form class="form-horizontal" method="post" id="form" autocomplete="off">
+                    <fields{% load staticfiles %}et>
+                        <div class="    # if request.method=='POST':
+    #     username=request.POST.get('username','')
+    #     password=request.POST.get('password','')
+    #     user=auth.authenticate(username=username,password=password)
+    #     if user and user.is_active:
+    #          auth.login(request,user)
+    #          return HttpResponseRedirect('/admin')input-group input-group-lg">
+                            <!--<span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>-->
+                            <input name="username" class="nameInput" placeholder="账号" id="username"
+                                   autocomplete="off">
+                        </div>
+                        <div class="nameDiv"></div>
+                        <br>
+
+                        <div class="input-group input-group-lg">
+                            <!--<span class="input-group-addon"><i class="glyphicon glyphicon-lock red"></i></span>-->
+                            <input type="password" name="password" class="pwdInput" placeholder="请输入密码" id="password"
+                           {% load staticfiles %}         autocomplete="off">
+                        </div>
+                        <!--<div class="nameDiv"></div><br>-->
+                        <p class="btns">
+                            <button class="loginBtn" id="login"
+                                    onkeydown="javascript:if(event.keyCode==13){event.returnValue = false}"
+                            onclick="loginCheck(event)">登&nbsp;&nbsp;&nbsp;录
+                            </button>
+                            <button class="resetBtn" type="button" id="reset" onclick="reSet()">重&nbsp;&nbsp;&nbsp;置
+                            </button>
+                        </p>
+                        <!{% load staticfiles %}--<div class="hr"></div>
+                        <div class="foot-link">
+                            <a href="#forget">忘记密码？</a>
+                        </div>-->
+                        <!--<div class="form-group">
+                        </div>-->
+                    </fieldset>
+                    <!-- 隐藏登录成功后的跳转地址-->
+                    <input type="hidden" name="next" value="{{ next }}"/>
+                </form>
+            </div>
+            <!--/span-->
+        </article>
+        <!--/row-->
+    </div>
+    <!--/fluid-row-->
+</div>
+</body>
+<script src="{%static 'lib/jquery/1.9.1/jquery.min.js'%}"></script>
+<script src="{%static 'lib/layer/2.1/layer.js'%}"></script>
+<script>
+    function loginCheck(event) {
+        if($("#username").val()==''){
+            event.preventDefault();
+            layer.tips('请输入用户名', '#username', {
+                tips: [3, '#3595CC'],
+                time: 1000
+            });
+        }else if($("#password").val()==''){
+            event.preventDefault();
+            layer.tips('请输入密码', '#password', {
+                tips: [3, '#3595CC'],
+                time: 1000
+            });
+        }
+    }
+
+    function reSet() {
+        $("#username").val("");
+        $("#password").val("");
+    }
+
+</script>
+
+</html>
