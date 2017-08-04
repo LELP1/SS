@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>数据管理平台 | Log in</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+    </title>
+    {% block extracss %}
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{%'staticcss/login.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+<form id="loginForm" method="post" action="">
+<div class="content">
+    <h2>元数据管理平台</h2>
+    <div class="input-box">
+        <input class="input" type="text" id="username" placeholder="用户名">
+        <input class="input" type="password" id="password" placeholder="密码">
+    </div>
+    <div class="button-box">
+        <a class="btn btn-default"  href="javascript:void(0);" onclick="loginCheck()">登录</a>
+        <a class="btn btn-default" href="javascript:void(0);" onclick="reSet()" >重置</a>
+    </div>
+</div>
+<canvas></canvas>
+</form>
+</body>
+{% block extracss %}
+<script src="{%static 'lib/jquery/1.9.1/jquery.min.js'%}"></script>
+<script src="{%static 'lib/layer/2.1/layer.js'%}"></script>
+{% endblock %}
+<script>
+
+    var c = document.getElementsByTagName('canvas')[0],
+        x = c.getContext('2d'),
+        pr = window.devicePixelRatio || 1,
+        w = window.innerWidth,
+        h = window.innerHeight,
+        f = 90,
+        q,
+        m = Math,
+        r = 0,
+        u = m.PI*2,
+        v = m.cos,
+        z = m.random;
+    c.width = w*pr;
+    c.height = h*pr;
+    x.scale(pr, pr);
+    x.globalAlpha = 0.6;
+    function i(){
+        x.clearRect(0,0,w,h);
+        q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}];
+        while(q[1].x<w+f) d(q[0], q[1])
+    }
+    function d(i,j){
+        x.beginPath();
+        x.moveTo(i.x, i.y);
+        x.lineTo(j.x, j.y);
+        var k = j.x + (z()*2-0.25)*f,
+            n = y(j.y);
+        x.lineTo(k, n);
+        x.closePath();
+        r-=u/-50;
+        x.fillStyle = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16);
+        x.fill();
+        q[0] "{%static 'lib/jquery/1.9.1/jquery.min.js'%}"= q[1];
+        q[1] = {x:k,y:n}
+    }
+    function y(p){
+        var t = p + (z()*2-1.1)*f;
+        return (t>h||t<0) ? y(p) : t
+    }
+    document.onclick = i;
+    document.ontouchstart = i;
+    i();
+
+    function loginCheck() {
+        if($("#username").val()==''){
+            event.preventDefault();
+            layer.tips('请输入用户名', '#username', {
+                tips: [2, '#3595CC'],
+                time: 2000
+            });
+            $("#username").focus();
+        }else if($("#password").val()==''){
+            event.preventDefault();
+            layer.tips('请输入密码', '#password', {
+                tips: [2, '#3595CC'],
+                time: 2000
+            });
+            $("#password").focus();
+        }else{
+            ajaxSubmit();
+        }
+    }
+
+    function reSet() {
+        $("#username").val("");
+        $("#password").val("");
+    }
+
+    function ajaxSubmit(){
+        var loading = layer.load(1, {
+            shade: [0.1,'#fff'] //0.1透明度的白色背景
+        });
+        $.ajax({
+            type: "post",
+            url: "/login/check_login",
+            data: {"username":$('#username').val(),"password":$('#password').val()},//TODO 加密密码
+            dataType: "json",
+            //contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                if(data.status){
+                    layer.closeAll('loading');
+                    window.location.href="./index";
+                }else {
+                    layer.closeAll('loading');
+                    layer.msg('用户名或密码错误');
+                }
+                console.log(data);
+            },
+            error: function (error) {
+                console.log(error);
+            },
+            error:function (data) {
+                layer.closeAll('loading');
+                layer.msg('服务器出现了错误');
+            }
+        });
+    }
+
+</script>
+
+</html>

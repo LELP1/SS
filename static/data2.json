@@ -1,0 +1,108 @@
+[
+{
+    "code":0,
+    "message":"",
+    "body":{
+        "wtCount":9,
+        "missRate":0.00000398841,
+        "expectedDataCount":38879550,
+        "wfCount":2,
+        "dataCount":38864129,
+        "size":1591874723,
+        "fieldGroupId":"gw_cms_20ms",
+        "fieldName":"场控cms_20ms_数据",
+        "lastUpdateTime":"2017-11-02 00:00:01"
+    }
+},
+{
+    "code":0,
+    "message":"",
+    "body":{
+        "wtCount":9,
+        "missRate":0.00000398841,
+        "expectedDataCount":38879550,
+        "wfCount":2,
+        "dataCount":38864129,
+        "size":1591874723,
+        "fieldGroupId":"gw_cms_20ms",
+        "fieldName":"场控cms_20ms_数据",
+        "lastUpdateTime":"2017-11-02 00:00:01"
+    }
+},
+{
+    "code":0,
+    "message":"",
+    "body":{
+        "wtCount":9,
+        "missRate":0.00000398841,
+        "expectedDataCount":38879550,
+        "wfCount":2,
+        "dataCount":38864129,
+        "size":1591874723,
+        "fieldGroupId":"gw_cms_20ms",
+        "fieldName":"场控cms_20ms_数据",
+        "lastUpdateTime":"2017-11-02 00:00:01"
+    }
+},
+{
+    "code":0,
+    "message":"",
+    "body":{
+        "wtCount":9,
+        "missRate":0.00000398841,
+        "expectedDataCount":38879550,
+        "wfCount":2,
+        "dataCount":38864129,
+        "size":1591874723,
+        "fieldGroupId":"gw_cms_20ms",
+        "fieldName":"场控cms_20ms_数据",
+        "lastUpdateTime":"2017-11-02 00:00:01"
+    }
+},
+{
+    "code":0,
+    "message":"",
+    "body":{
+        "wtCount":9,
+        "missRate":0.00000398841,
+        "expectedDataCount":38879550,
+        "wfCount":2,
+        "dataCount":38864129,
+        "size":1591874723,
+        "fieldGroupId":"gw_cms_20ms",
+        "fieldName":"场控cms_20ms_数据",
+        "lastUpdateTime":"2017-11-02 00:00:01"
+    }
+},
+{
+    "code":0,
+    "message":"",
+    "body":{
+        "wtCount":9,
+        "missRate":0.00000398841,
+        "expectedDataCount":38879550,
+        "wfCount":2,
+        "dataCount":38864129,
+        "size":1591874723,
+        "fieldGroupId":"gw_cms_20ms",
+        "fieldName":"场控cms_20ms_数据",
+        "lastUpdateTime":"2017-11-02 00:00:01"
+    }
+},
+{
+    "code":0,
+    "message":"",
+    "body":{
+        "wtCount":9,
+        "missRate":0.00000398841,
+        "expectedDataCount":38879550,
+        "wfCount":2,
+        "dataCount":38864129,
+        "size":1591874723,
+        "fieldGroupId":"gw_cms_20ms",
+        "fieldName":"场控cms_20ms_数据",
+        "lastUpdateTime":"2017-11-02 00:00:01"
+    }
+}
+
+]

@@ -1,0 +1,109 @@
+html, body {
+    position: relative;
+    height: 100%;
+    overflow-y: hidden;
+    min-width:1200px;
+    min-height:600px;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.content {
+    padding: 50px;
+    position: relative;
+    width: 1100px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.data-table {
+    position: relative;
+    padding: 50px;
+    width: 1100px;
+    margin: 0 auto;
+    top: -100px;
+}
+
+.searchTable {
+    margin-bottom: 20px;
+}
+
+.data-table p {
+    position: relative;
+    height: 30px;
+    margin: auto 0;
+    line-height: 30px;
+    font-size: 1.5em;
+}
+
+td > button {
+    position: relative;
+    left: 380px;
+}
+
+.data-menu:hover .data-ul{
+    display: block;
+}
+
+.data-ul{
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 132px;
+    top: 45px;
+    left: -16px;
+    background-color: #1F1F1F;
+    cursor: default;
+}
+
+.data-li{
+    transition: background-color .25s linear;
+}
+
+.data-li:hover{
+    background-color: #7D7D7D;
+}
+
+.dt-button{
+    display: inline-block;
+    background-color: darkolivegreen;
+    height: 31px;
+    width:54px;
+    margin:4px 9px;
+    border-radius: 9px;
+    border:2px solid #222;
+}

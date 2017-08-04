@@ -1,0 +1,321 @@
+* {
+    text-indent: 0;
+}
+
+
+
+html, body {
+    position: relative;
+    height: 100%;
+    overflow-y: hidden;
+    min-width: 1200px;
+    min-height: 600px;
+}
+
+body {
+    background: rgba(222, 222, 222, 1);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.fault-tab {
+    display: inline-block;
+    padding: 50px;
+    position: relative;
+    width: 800px;
+    height: 500px;
+}
+
+.content {
+    padding: 50px;
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+.content::after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#kmx-content{
+    padding: 50px;
+    position: relative;
+    width: 1100px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.test-box {
+    position: relative;
+    bottom: 0;
+    height: 313px;
+    float: left;
+    width: 251px;
+    border-radius: 6px 17px 6px 6px;
+    display: inline-block;
+    margin: 50px 20px;
+    background-color: #CCCCCC;
+    transition: all 0.2s;
+}
+
+.test-box:hover {
+    bottom: 8px;
+    transition: all 0.3s;
+}
+.card-title {
+    color:#CCCCCC;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 11px 11px 0 0;
+    background-color:#333;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+
+}
+.card-content p{
+    margin: 0;
+}
+
+.card-content {
+    margin: 13px 0 0 7px;
+}
+
+.nav-btn {
+
+    list-style: none;
+    margin: 5px 0 0 15px;
+}
+
+.otherData-overview {
+    margin-left: 30px;
+}
+
+.data-table {
+    position: relative;
+    padding: 50px;
+    width: 1100px;
+    margin: 0 auto;
+    top: -50px;
+}
+
+.searchTable {
+    margin-bottom: 20px;
+}
+
+.data-table p {
+    position: relative;
+    height: 30px;
+    margin: auto -10px;
+    line-height: 30px;
+    font-size: 27px!important;
+}
+
+td > button {
+    position: relative;
+    left:180px;
+}
+
+.kmx-button{
+    left: 380px;
+}
+
+.data-menu:hover .data-ul{
+    display: block;
+}
+
+.data-ul{
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 88px;
+    top: 45px;
+    left: -16px;
+    background-color: #1F1F1F;
+    cursor: default;
+}
+
+.data-li{
+    transition: background-color .25s linear;
+}
+
+.data-li:hover{
+    background-color: #7D7D7D;
+}
+
+.data-li a{
+    color: #fff;
+}
+
+.card-content li label{
+    text-align: right;
+    float:left;
+    width:80px;
+
+}
+
+.last-p{
+    margin:0;
+}
+
+
+.card-content li p{
+    width:160px;
+    margin-left: 80px;
+}
+
+
+/*fault             */
+
+.datepicker {
+    width: 500px;
+    padding: 10px 0 10px 400px;
+}
+
+.datepickersecond div{
+    width: 280px;
+}
+
+.pandect {
+    display: inline-block;
+    position: relative;
+    top: -50px;
+    width: 300px;
+    height: 400px;
+}
+
+.pandect ul {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+.pandect li {
+    height: 54px;
+    line-height: 54px;
+    padding-left: 20px;
+    border-top: 1px solid;
+    text-align: left;
+}
+
+.pandect li:nth-child(1) {
+    height: 70px;
+    line-height: 70px;
+    padding-left: 20px;
+    border-top: none;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.fault-content{
+    display: inline-block;
+    padding: 50px;
+    position: relative;
+    width: 950px;
+    height: 500px;
+    left: -50px;
+}
+
+/*tips  */
+.tips{
+    opacity:0.7;
+    position:absolute;
+    top:-71px;
+    left:-16px;
+    margin:0 0 2px 18px;
+    width:0px;
+    height:0px;
+    overflow: hidden;
+    transition: all,0.5s;
+}
+.tips-animation{
+    height:70px;
+    width:245px;
+}
+
+.tip-main{
+    width:100%;
+    height:50px;
+    border-radius: 11px;
+    background-color: darkgrey;
+}
+
+.tip-tge{
+    width:0;
+    border-left:16px solid  transparent;
+    border-right:4px solid transparent;
+    border-top:13px solid darkgrey;
+    position:relative;
+    left:15px;
+}
+.close-btn{
+    height:48px;
+    width:35px;
+    font-size: 25px;
+    background-color: transparent;
+    border:none;
+    position: absolute;
+    right:0px;
+    top:0px;
+    outline:none;
+    transition: all 0.5s;
+}
+.close-btn:hover{
+    transform: rotate(90deg);
+    cursor: pointer;
+}
